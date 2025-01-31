@@ -1,0 +1,49 @@
+<div class="container d-flex justify-content-between">
+    <div>
+        <h3 class="text-primary">One Way Data Binding</h3>
+        <div>
+            <!-- •	Interpolation {{}}  -->
+            <h4 class="text-info">• Interpolation</h4>
+            <p>Full Name: {{firstName}} {{lastName}} </p>
+            <p>Age: {{age}}</p>
+        </div>
+        <div>
+            <!-- •	Property Binding []  -->
+            <h4 class="text-info">• Property Binding </h4>
+            <input type="text" [value]="firstName">
+            <input class="mx-2" type="text" [placeholder]="myPleceholder">
+            <div [class]="myStyleDiv" style="width: 300px; height: 80px; margin-top: 20px;"></div>
+        </div>
+        <div>
+            <!-- •	Event Binding (()):   -->
+            <h4 class="text-info mt-4">• Event Binding </h4>
+            <button class="btn btn-success" (click)="showWelcomeMessage()">Click Me</button>
+            <div>
+                <h6>Dropdown Menu</h6>
+                <select (change)="onCityChanged()">
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nashik">Nashik</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="mx-16">
+        <!--  	Using [(ngModel)]: Binds both the input element's value and the component's property. -->
+        <h3 class="text-primary">Two Way Data Binding</h3>
+        <div>
+            <input type="text" placeholder="Enter the firstName" [(ngModel)]="firstName">
+            <input class="mx-2" placeholder="Enter the lastName" type="text" [(ngModel)]="lastName">
+            <input class="mx-2" placeholder="Enter the Age" type="text" [(ngModel)]="age">
+        </div>
+        <div>
+            <select [(ngModel)]="slectedCity">
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Nashik">Nashik</option>
+            </select>
+            {{slectedCity}}
+        </div>
+    </div>

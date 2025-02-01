@@ -22,3 +22,48 @@
         <input type="text" placeholder="Show Div Enter the same value" [(ngModel)]="number2">
     </div>
 </div>
+
+<h3 class="text-primary pt-3">Using ngFor Directive</h3>
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityList">{{city}}</li>
+        </ul>
+    </div>
+    <div class="col-8">
+        <button class="btn btn-info mx-1" *ngFor="let city of cityList" [value]="city">
+            {{city}}
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Department</th>
+                    <th>Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employeesList; let srno = index">
+                    <td>{{srno}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.age}}</td>
+                    <td>{{emp.department}}</td>
+                    <td>{{emp.skills}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <select>
+            <option *ngFor="let emp of employeesList" [value]="emp.id">
+                {{emp.name}} - {{emp.department}}
+            </option>
+        </select>
+    </div>
+</div>

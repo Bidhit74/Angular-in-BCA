@@ -5,6 +5,7 @@ import { AttributeDirectiveComponent } from './components/attribute-directive/at
 import { DirectiveNgIfAndNgForComponent } from './components/directive-ng-if-and-ng-for/directive-ng-if-and-ng-for.component';
 import { UserComponent } from './components/user/user.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
+import { SignalComponent } from './components/signal/signal.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,9 @@ export const routes: Routes = [
   {
     path: 'control-flow',
     component: ControlFlowComponent,
+  },
+  {
+    path: 'signal',
+    component: SignalComponent,
   },
 ];

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { DirectiveNgIfAndNgForComponent } from './components/directive-ng-if-and-ng-for/directive-ng-if-and-ng-for.component';
 
 @Component({
   selector: 'app-root',
-  imports: [DataBindingComponent],
+  imports: [DirectiveNgIfAndNgForComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

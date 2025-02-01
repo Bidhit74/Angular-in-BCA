@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { DirectiveNgIfAndNgForComponent } from './components/directive-ng-if-and-ng-for/directive-ng-if-and-ng-for.component';
-
+import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
 @Component({
   selector: 'app-root',
-  imports: [DirectiveNgIfAndNgForComponent],
+  imports: [AttributeDirectiveComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

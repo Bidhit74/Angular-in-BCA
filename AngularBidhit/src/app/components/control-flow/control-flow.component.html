@@ -1,0 +1,56 @@
+<div class="row mt-4">
+    <div class="col-3">
+        @if(div1Visible){
+        <div class="bg-success p-3">
+            Div 1
+        </div>
+        }
+    </div>
+    <div class="col-3">
+        @if(isChecked){
+        <div class="bg-primary p-3">
+            Checkbox is checked.
+        </div>
+        }
+        @else {
+        <div class="bg-info-subtle p-3">
+            Checkbox is unchecked.
+        </div>
+        }
+    </div>
+    <div class="col-3">
+        @if(dayName == 'mon'){
+        <span>Monday</span>
+        }
+        @else if (dayName=='sun') {
+        <span>Sunday</span>
+        }
+        @else {
+        <span>Enter Proper Day Name</span>
+        }
+    </div>
+</div>
+<div class="row mt-1">
+    <div class="col-3">
+        <div class="btn btn-success mx-2" (click)="showHideDiv(true)">Show</div>
+        <div class="btn btn-danger" (click)="showHideDiv(false)">Hide</div>
+    </div>
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isChecked">
+    </div>
+    <div class="col-3">
+        <input type="text" maxlength="3" placeholder="Enter the day name strating" [(ngModel)]="dayName">
+    </div>
+</div>
+
+<div class="row mt-4 mx-3">
+    <div class="col-4">
+        <select name="" id="">
+            @for(item of citylist; track $index){
+            <option value="">
+                {{$index+1}} - {{item}}
+            </option>
+            }
+        </select>
+    </div>
+</div>

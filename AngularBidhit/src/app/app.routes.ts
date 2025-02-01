@@ -6,6 +6,7 @@ import { DirectiveNgIfAndNgForComponent } from './components/directive-ng-if-and
 import { UserComponent } from './components/user/user.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { SignalComponent } from './components/signal/signal.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 
 export const routes: Routes = [
   {
@@ -40,5 +41,9 @@ export const routes: Routes = [
   {
     path: 'signal',
     component: SignalComponent,
+  },
+  {
+    path: 'template-form',
+    component: TemplateFormComponent,
   },
 ];

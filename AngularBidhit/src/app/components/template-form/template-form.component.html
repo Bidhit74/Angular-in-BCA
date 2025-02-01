@@ -1,0 +1,79 @@
+<h1 class="text-info">Template-form works!</h1>
+<form #Form="ngForm" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" [(ngModel)]="userForm.fName" name="fName" #fname="ngModel"
+            id="validationCustom01" required>
+        <div class="text-danger">
+            @if(fname.errors?.['required'] && fname.touched && fname.dirty){
+            <span>This is Required</span>
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" [(ngModel)]="userForm.lName" #lname="ngModel"
+            name="lName" minlength="4" required>
+        <div class="text-danger">
+            <span *ngIf="lname.errors?.['required'] && lname.touched">This is Required</span>
+            <span *ngIf="lname.errors?.['minlength'] && lname.touched">Min Char 4 Required</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+            <input type="text" class="form-control" [(ngModel)]="userForm.userName" name="userName"
+                id="validationCustomUsername" required>
+            <div class="invalid-feedback">
+                Please choose a username.
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" [(ngModel)]="userForm.city" name="city" id="validationCustom03"
+            required>
+        <div class="invalid-feedback">
+            Please provide a valid city.
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" [(ngModel)]="userForm.state" name="state" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="UP">UP</option>
+            <option value="Jharkhand">Jharkhand</option>
+        </select>
+        <div class="invalid-feedback">
+            Please select a valid state.
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" class="form-control" [(ngModel)]="userForm.zipCode" name="zipCode" id="validationCustom05"
+            required>
+        <div class="invalid-feedback">
+            Please provide a valid zip.
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" [(ngModel)]="userForm.isActive"
+                name="isActive" required>
+            <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <button [disabled]="Form.invalid" class="btn btn-primary" type="button" (click)="getInputValue()">Submit
+            form</button>
+    </div>
+</form>

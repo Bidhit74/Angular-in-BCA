@@ -7,6 +7,7 @@ import { UserComponent } from './components/user/user.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { SignalComponent } from './components/signal/signal.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 export const routes: Routes = [
   {
@@ -45,5 +46,9 @@ export const routes: Routes = [
   {
     path: 'template-form',
     component: TemplateFormComponent,
+  },
+  {
+    path: 'reactive-form',
+    component: ReactiveFormComponent,
   },
 ];

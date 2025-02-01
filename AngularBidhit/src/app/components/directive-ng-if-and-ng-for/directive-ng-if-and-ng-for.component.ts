@@ -1,10 +1,16 @@
-import { NgFor, NgIf } from '@angular/common';
+import {
+  NgFor,
+  NgIf,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-directive-ng-if-and-ng-for',
-  imports: [NgIf, FormsModule, NgFor],
+  imports: [NgIf, FormsModule, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './directive-ng-if-and-ng-for.component.html',
   styleUrl: './directive-ng-if-and-ng-for.component.css',
 })
@@ -59,6 +65,7 @@ export class DirectiveNgIfAndNgForComponent {
       skills: ['Negotiation', 'CRM', 'Customer Service'],
     },
   ];
+  myValue: number = 2;
   showDiv() {
     this.divVisible = true;
   }

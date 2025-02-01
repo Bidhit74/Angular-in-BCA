@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="text-danger-emphasis">
+        Attribute Directive Works!
+    </h1>
+    <div class="row">
+        <h3 class="text-primary">ngClass Used</h3>
+        <div class="col-3">
+            <div class="p-2" [ngClass]="stuDivClassName">
+                Student
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-2 mb-2" [ngClass]="empDivClassName">
+                Employee
+            </div>
+            <input type="text" placeholder="Add Bootsrap class" [(ngModel)]="empDivClassName">
+        </div>
+        <div class="col-3 mx-4">
+            <div class="p-2 mb-2" [ngClass]="productClass">
+                Product
+            </div>
+            <button class="btn btn-danger mx-2" (click)="addProductClass('red')">Red</button>
+            <button class="btn btn-success" (click)="addProductClass('green')">Green</button>
+        </div>
+        <div class="col-3">
+            <div class="p-3" [ngClass]="isOrderActive ? 'bg-success': 'bg-danger'">
+                Order
+            </div>
+            <input type="checkbox" [(ngModel)]="isOrderActive">
+        </div>
+    </div>
+</div>

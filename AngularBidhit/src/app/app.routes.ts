@@ -4,6 +4,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
 import { DirectiveNgIfAndNgForComponent } from './components/directive-ng-if-and-ng-for/directive-ng-if-and-ng-for.component';
 import { UserComponent } from './components/user/user.component';
+import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'directiveNgIfNgFor',
     component: DirectiveNgIfAndNgForComponent,
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent,
   },
 ];

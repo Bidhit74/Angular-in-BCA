@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [AttributeDirectiveComponent],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

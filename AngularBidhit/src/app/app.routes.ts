@@ -12,6 +12,7 @@ import { GetApiComponent } from './components/API/get-api/get-api.component';
 import { PostApiComponent } from './components/API/post-api/post-api.component';
 import { PutApiComponent } from './components/API/put-api/put-api.component';
 import { DeleteApiComponent } from './components/API/delete-api/delete-api.component';
+import { CustomersProfileComponent } from './components/API/customers-profile/customers-profile.component';
 
 export const routes: Routes = [
   {
@@ -70,5 +71,9 @@ export const routes: Routes = [
   {
     path: 'delete-api',
     component: DeleteApiComponent,
+  },
+  {
+    path: 'customers-profile',
+    component: CustomersProfileComponent,
   },
 ];

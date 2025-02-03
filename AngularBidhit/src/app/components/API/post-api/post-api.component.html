@@ -1,0 +1,100 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <h2 class="text-info">
+            Post API Integration using Template Form
+        </h2>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-header bg-warning">
+                <h5>Card List</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Sr No</th>
+                            <th>Req No</th>
+                            <th>Brand</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Daily Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (item of carList; track $index) {
+                        <tr>
+                            <td>
+                                <img [src]="item?.carImage" alt="{{ item?.brand }}" width="50" height="50"
+                                    onerror="this.src='https:/as1.ftcdn.net/v2/jpg/11/18/30/58/1000_F_1118305863_tMDJDC6OyV4D735tNlNEiIrZUaFzuB8z.jpg'">
+
+                            </td>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ item?.regNo }}</td>
+                            <td>{{ item?.brand }}</td>
+                            <td>{{ item?.model }}</td>
+                            <td>{{ item?.year }}</td>
+                            <td>{{ item?.dailyRate }}</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="card">
+            <div class="card-header bg-warning">
+                <h5>Create New Car</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 mt-2">
+                        <label for="reqNo">Req No</label>
+                        <input type="text" [(ngModel)]="carObj.regNo" class="form-control" name="reqNo"
+                            placeholder="Enter req no">
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="brand">Brand</label>
+                        <input type="text" [(ngModel)]="carObj.brand" class="form-control" name="brand"
+                            placeholder="Enter brand name">
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="model">Model</label>
+                        <input type="text" [(ngModel)]="carObj.model" class="form-control" name="model"
+                            placeholder="Enter model name">
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="year">Year</label>
+                        <input type="text" [(ngModel)]="carObj.year" class="form-control" name="year"
+                            placeholder="Enter year">
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="color">Color</label>
+                        <input type="text" [(ngModel)]="carObj.color" class="form-control" name="color"
+                            placeholder="Enter color">
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="dailyRate">Daily Rate</label>
+                        <input type="text" [(ngModel)]="carObj.dailyRate" class="form-control" name="dailyRate"
+                            placeholder="Enter daily rate">
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="carImage">Car Image</label>
+                        <input type="text" [(ngModel)]="carObj.carImage" [(ngModel)]="carObj.carImage"
+                            class="form-control" name="carImage" placeholder="Enter car image url">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="btn btn-success m-2" (click)="saveCar()">Save Car</div>
+                    <div class="btn btn-danger m-2" (click)="resetForm()">Reset Form</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

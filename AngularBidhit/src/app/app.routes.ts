@@ -8,6 +8,7 @@ import { ControlFlowComponent } from './components/control-flow/control-flow.com
 import { SignalComponent } from './components/signal/signal.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { GetApiComponent } from './components/API/get-api/get-api.component';
 
 export const routes: Routes = [
   {
@@ -50,5 +51,9 @@ export const routes: Routes = [
   {
     path: 'reactive-form',
     component: ReactiveFormComponent,
+  },
+  {
+    path: 'get-api',
+    component: GetApiComponent,
   },
 ];

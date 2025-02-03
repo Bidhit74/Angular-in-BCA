@@ -10,6 +10,7 @@ import { TemplateFormComponent } from './components/template-form/template-form.
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { GetApiComponent } from './components/API/get-api/get-api.component';
 import { PostApiComponent } from './components/API/post-api/post-api.component';
+import { PutApiComponent } from './components/API/put-api/put-api.component';
 
 export const routes: Routes = [
   {
@@ -60,5 +61,9 @@ export const routes: Routes = [
   {
     path: 'post-api',
     component: PostApiComponent,
+  },
+  {
+    path: 'put-api',
+    component: PutApiComponent,
   },
 ];
